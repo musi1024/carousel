@@ -1,18 +1,45 @@
-.images > img {
-    vertical-align: top;    
-}
+* {
+    margin:0;
+    padding:0;
 
-.images {
-    display: flex;
-    align-items: flex-start;
-    transition: all 0.5s;
+}
+* {
+    box-sizing: border-box;
 }
 
 .window {
     width: 440px;
+    height: 458px;
+    margin: 20px auto;
     overflow: hidden;
+}
+
+.images {
+    position: relative;
+}
+
+.images > img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transition: all 1500ms;
 }
 
 .red {
     color: red;
+}
+
+.images > img.center {
+    transform: translateX(0);
+    z-index: 1;
+    left: 0;
+}
+
+.images > img.left {
+    transform: translateX(-100%);
+    z-index: 1
+}
+
+.images > img.right {
+    transform: translateX(100%);
 }
